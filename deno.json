@@ -1,0 +1,17 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "build": "vite",
+    "transpile": "swc main.ts -q",
+    "dev": "deno -q task transpile | deno run -A -"
+  },
+  "imports": {
+    "@std/expect": "jsr:@std/expect@^1.0.5",
+    "@std/testing": "jsr:@std/testing@^1.0.3",
+    "reflect-metadata": "npm:reflect-metadata@^0.2.2"
+  },
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
